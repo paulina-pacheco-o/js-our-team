@@ -46,7 +46,7 @@ const generateCard = (member) => {
           <div class="card bg-dark border-0">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="./img/${img}">
+                <img src="./assets/${img}">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -67,7 +67,7 @@ let cards = ``
 
 for (let i = 0; i < teamMembers.length; i++) {
   const member = teamMembers[i];
-  let cards = generateCard(member);
+  cards += generateCard(member);
 }
 
-teamContainer.innerHTML += memberCard
+teamContainer.innerHTML = cards
